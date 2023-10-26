@@ -1,0 +1,16 @@
+.footer{
+    background: url('../Images/leafbg.png') ;
+    line-height:2;
+    padding:20px;
+}
+.footer-icon{
+    margin-left:34em;
+    
+}
+.footer-text{
+    margin-left: 33px;
+    text-align:center;
+    font-size: 17px;
+    color:#fff;
+}
+

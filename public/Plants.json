@@ -1,0 +1,143 @@
+[
+    {
+      "id": 1,
+      "name": "Rose",
+      "suitability": "Balcony",
+      "imageUrl":"https://images.unsplash.com/photo-1596905904987-3dc12d4f0f33?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHJvc2UlMjBmbG93ZXJ8ZW58MHx8MHx8fDA%3D",
+      "type": "Floral"
+    },
+    {
+      "id": 2,
+      "name": "Basil",
+      "suitability": "Balcony",
+      "imageUrl":"https://images.unsplash.com/photo-1619805640532-21cce5fe542b?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "type": "Herbal"
+    },
+    {
+      "id": 3,
+      "name": "Tomato",
+      "suitability": "Farm",
+      "imageUrl":"https://images.unsplash.com/photo-1592841200221-a6898f307baa?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRvbWF0b3xlbnwwfHwwfHx8MA%3D%3D",
+      "type": "Vegetable"
+    },
+    {
+      "id": 4,
+      "name": "Daisy",
+      "suitability": "Balcony",
+      "imageUrl":"https://images.unsplash.com/photo-1611088434615-ea7e8d09d54b?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fEdlcmJlcmElMjBEYWlzeXxlbnwwfHwwfHx8MA%3D%3D",
+      "type": "Floral"
+    },
+    {
+      "id": 5,
+      "name": "Mint",
+      "suitability": "Balcony",
+      "imageUrl":"https://images.unsplash.com/photo-1588908933351-eeb8cd4c4521?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWludCUyMHBsYW50fGVufDB8fDB8fHww",
+      "type": "Herbal"
+    },
+    {
+      "id": 6,
+      "name": "Marigold",
+      "suitability": "Balcony",
+      "imageUrl":"https://images.unsplash.com/photo-1620005807545-2e08850d6591?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFyaWdvbGR8ZW58MHx8MHx8fDA%3D",
+      "type": "Floral"
+    },
+    {
+      "id": 7,
+      "name": "Sunflower",
+      "suitability": "Garden",
+      "imageUrl":"https://images.unsplash.com/photo-1597848212624-a19eb35e2651?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3VuZmxvd2VyfGVufDB8fDB8fHww",
+      "type": "Floral"
+    },
+    {
+      "id": 8,
+      "name": "Snake Plant",
+      "suitability": "Balcony",
+      "imageUrl":"https://images.unsplash.com/photo-1593482892540-73c9199d8949?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c25ha2UlMjBwbGFudHxlbnwwfHwwfHx8MA%3D%3D",
+      "type": "Others"
+    },
+    {
+      "id": 9,
+      "name": "Lemon Verbena",
+      "suitability": "Farm",
+      "imageUrl":"https://images.unsplash.com/photo-1561846845-1fbee407852a?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8TGVtb24lMjB0cmVlfGVufDB8fDB8fHww",
+      "type": "Herbal"
+    },
+    {
+      "id": 10,
+      "name": "Carrot",
+      "suitability": "Garden",
+      "imageUrl":"https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q2Fycm90fGVufDB8fDB8fHww",
+      "type": "Vegetable"
+    },
+    {
+      "id": 11,
+      "name": "Money Plant",
+      "suitability": "Balcony",
+      "imageUrl":"https://media.istockphoto.com/id/1458827519/photo/large-heart-shaped-leaves-of-hawaiian-pothos-plant-in-garden.webp?b=1&s=170667a&w=0&k=20&c=KXgE8qOXofAxzuKaegwwDMEHGTX-LCcANovRVyafxs4=",
+      "type": "Others"
+    },
+    {
+      "id": 12,
+      "name": "peepal",
+      "suitability": "Farm",
+      "imageUrl":"https://images.unsplash.com/photo-1625395023685-9e270d5e324b?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVlcGFsfGVufDB8fDB8fHww",
+      "type": "Others"
+    },
+    {
+      "id": 13,
+      "name": "Philodendron",
+      "suitability": "Balcony",
+      "imageUrl":"https://images.unsplash.com/photo-1611068121255-6c385c1ae32c?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8UGhpbG9kZW5kcm9ufGVufDB8fDB8fHww",
+      "type": "Others"
+    },
+    {
+      "id": 14,
+      "name": "Orchid",
+      "suitability": "Balcony",
+      "imageUrl":"https://plus.unsplash.com/premium_photo-1676253694654-79c2214ccbc7?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8b3JjaGlkfGVufDB8fDB8fHww",
+      "type": "Floral"
+    },
+    {
+      "id": 15,
+      "name": "Bell Pepper",
+      "suitability": "Farm",
+      "imageUrl":"https://images.unsplash.com/photo-1604488943825-f95dc6796ca5?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmVsbCUyMHBlcHBlciUyMHBsYW50fGVufDB8fDB8fHww",
+      "type": "Vegetable"
+    },
+    {
+      "id": 16,
+      "name": "Rubber Plant",
+      "suitability": "Balcony",
+      "imageUrl":"https://images.unsplash.com/photo-1522428938647-2baa7c899f2f?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fFJ1YmJlciUyMHBsYW50fGVufDB8fDB8fHww",
+      "type": "Others"
+    },
+    {
+      "id": 17,
+      "name": "Spider plant",
+      "suitability": "Balcony",
+      "imageUrl":"https://images.unsplash.com/photo-1572688484438-313a6e50c333?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U3BpZGVyJTIwcGxhbnR8ZW58MHx8MHx8fDA%3D",
+      "type": "Others"
+    },
+    {
+      "id": 18,
+      "name": "Parsley",
+      "suitability": "Balcony",
+      "imageUrl":"https://images.unsplash.com/photo-1588879460618-9249e7d947d1?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGFyc2xleXxlbnwwfHwwfHx8MA%3D%3D",
+      "type": "Herbal"
+    },
+    {
+      "id": 19,
+      "name": "Areca Palm",
+      "suitability": "Garden",
+      "imageUrl":"https://images.unsplash.com/photo-1630565945904-7e4220cadd0e?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "type": "Others"
+    },
+    {
+      "id": 20,
+      "name": "Peace lily",
+      "suitability": "Balcony",
+      "imageUrl":"https://images.unsplash.com/photo-1593691509543-c55fb32d8de5?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UGVhY2UlMjBsaWx5fGVufDB8fDB8fHww",
+      "type": "Floral"
+    }
+  ]
+  

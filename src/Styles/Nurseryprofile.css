@@ -1,0 +1,49 @@
+.edit-btn{
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #285430;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.profile-head {
+  padding: 20px;
+  text-align: center;
+  color: #285430;
+  font-size: 30px;
+}
+
+.profile-container {
+  display: flex;
+  margin: 20px;
+}
+
+.profile-image-container {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #285430;
+}
+
+.profile-cont span {
+  color: #285430;
+  padding: 10px;
+  font-weight: bold;
+  
+}
+
+.profile-cont div {
+  padding: 10px;
+  margin-left: 30px;
+
+}

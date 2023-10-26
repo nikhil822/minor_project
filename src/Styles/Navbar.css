@@ -1,0 +1,80 @@
+*{
+  margin:0;
+  padding:0;
+}
+.navbar {
+  background: url('../Images/leafbg.png') ;
+  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-list li {
+    margin-right: 20px;
+  }
+  
+  .nav-list li:last-child {
+    margin-right: 0;
+  }
+  
+  .nav-list li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .mobile-menu-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .mobile-menu-button.open {
+    display: flex;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-list {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      left: 0;
+    }
+  
+    .nav-list.open {
+      display: flex;
+    }
+  
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .mobile-menu-button {
+      display: flex;
+    }
+  }
+  

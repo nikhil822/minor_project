@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+.user-icon{
+    margin: 0 auto;
+    padding: 2px 20px;
+    margin-left: 24em;
+    color: #011e31;
+}
+.head{
+    text-align: center;
+    color: #011e31;
+    font-weight: bold;
+
+}
+.basic{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 8px;
+}
+
+input,
+select {
+    margin-top: 5px;
+    height: 33px;
+    border: 1.8px solid  #011e31;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 2.4vmin;
+    color: #011e31;
+    padding: 10px;
+}
+
+.main {
+    width: 100vw;
+    display: flex;
+}
+
+.image {
+    width: 50%;
+    height: auto; 
+    object-fit: cover;
+    background-color: #c8e3f3;
+}
+
+.form {
+    width: 100%;
+    height: fit-content;
+    padding: 25px;
+}
+
+.form-body {
+    background-color: white;
+    padding: 10px 5px;
+}
+
+.inp-field {
+    display: flex;
+    flex-direction: column;
+    width: calc(100%/2 - 15px);
+    padding: 5px;
+}
+
+::placeholder {
+    font-size: 2vmin;
+    padding: 5px;
+}
+
+img {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reg {
+    
+        margin: 40px auto;
+        padding: 5px 20px;
+        border: none;
+        border-radius: 5px;
+        color: whitesmoke;
+        height: 7vh;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        text-align: center;
+        font-size: 2.7vmin;
+        background-color: #011e31;
+}
+
+.reg:hover{
+    color:#011e31;
+    background-color: #6ba5cc;
+}
+
+
+
+@media only screen and (max-width:1000px) {
+    .inp-field {
+        width: calc(100%/2 - 15px);
+    }
+    .coll{
+        width:100vw;
+    }
+}
+
+@media only screen and (max-width:650px) {
+
+    .main {
+        flex-direction: column;
+    }
+
+    .image {
+        width: 100vw;
+        height: 30vh;
+        object-fit: cover;
+        background-color: #c8e3f3;
+
+    }
+
+    img {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .inp-field {
+        width: calc(100% - 15px);
+
+    }
+}
