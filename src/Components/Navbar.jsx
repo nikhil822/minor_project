@@ -1,4 +1,5 @@
 import  { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../Styles/Navbar.css';
 
 function Navbar() {
@@ -12,10 +13,11 @@ function Navbar() {
     <nav className={`navbar ${mobileMenuOpen ? 'collapsed' : ''}`}>
       <div className="logo">EcoReleaf</div>
       <ul className={`nav-list ${mobileMenuOpen ? 'open' : ''}`}>
-        <li><a href="#">SignUp</a></li>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/signup'>SignUp</Link></li>
+        <li><Link to='/login'>Login</Link></li>
+        <li><Link to='/about'>About</Link></li>
+        <li><Link to='/contact'>Contact</Link></li>
       </ul>
       <div className={`mobile-menu-button ${mobileMenuOpen ? 'open' : ''}`} onClick={toggleMobileMenu}>
         <div className="bar"></div>

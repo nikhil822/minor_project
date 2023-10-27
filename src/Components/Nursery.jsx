@@ -3,16 +3,21 @@ import Navbar from "./Navbar";
 export default function Nursery() {
   return (
     <>
-    <Navbar />
+      <Navbar />
       <div className="container">
         <div>
-        <form action="" className="search-bar">
-  <input type="search" name="search" pattern=".*\S.*" required placeholder="Search..." />
-  <button className="search-btn" type="submit">
-    <i className="fa-solid fa-search"></i>
-  </button>
-</form>
-
+          <form action="" className="search-bar">
+            <input
+              type="search"
+              name="search"
+              pattern=".*\S.*"
+              required
+              placeholder="Search..."
+            />
+            <button className="search-btn" type="submit">
+              <i className="fa-solid fa-search"></i>
+            </button>
+          </form>
         </div>
 
         <div className="nursery-desc">
@@ -77,7 +82,6 @@ export default function Nursery() {
             </p>
           </div>
         </div>
-
       </div>
     </>
   );

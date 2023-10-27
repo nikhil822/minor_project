@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import "../Styles/UserDet.css";
 import Navbar from "./Navbar";
 
 export default function UserDet() {
+  const navigate = useNavigate()
+
   return (
     <>
      <Navbar />
@@ -15,7 +18,7 @@ export default function UserDet() {
        <i className="fa-solid fa-circle-user fa-4x"></i>
        </div>
 
-       <div className="head">USER DETAILS</div>
+       <div className="head-user">USER DETAILS</div>
        <div className="form-body">
          <section className="basic">
 
@@ -23,7 +26,6 @@ export default function UserDet() {
              <label htmlFor="fname">Full Name</label>
              <input type="text" id="fname" placeholder="Enter Full Name" />
            </div>
-         
            <div className="inp-field">
            <label htmlFor="Phonenum">Phone Number</label>
              <input
@@ -44,8 +46,6 @@ export default function UserDet() {
              <label htmlFor="confirmPwd">Confirm Password</label>
              <input type="password" id="confirmPwd" placeholder="Confirm Password" />
            </div>
-
-
            <div className="inp-field">
              <label htmlFor="addr">Address</label>
              <input
@@ -89,7 +89,7 @@ export default function UserDet() {
           
          </section>
 
-         <button className="reg" href="#">
+         <button className="user-reg" href="#" onClick={() => navigate('/airquality')}>
            REGISTER
          </button>
        </div>

@@ -1,27 +1,30 @@
-import './App.css'
-// import UserProfile from './Components/UserProfile'
-// import Login from './Components/Login'
-// import Landing from './Components/Landing'
-// import NurseryProfile from './Components/NurseryProfile'
-// import PlantRecomm from './Components/PlantRecomm'
-// import NurseryDet from './Components/NurseryDet'
-// import UserDet from './Components/UserDet'
-import Nursery from './Components/Nursery'
-function App()
-{
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import UserProfile from './Components/UserProfile'
+import Landing from "./Components/Landing";
+import UserDet from "./Components/UserDet";
+import NurseryDet from "./Components/NurseryDet";
+import AirQuality from "./Components/AirQuality";
+import Login from "./Components/Login";
+import PlantRecomm from "./Components/PlantRecomm";
+import Nursery from "./Components/Nursery";
+function App() {
   return (
-    <>
-     {/* <Landing /> */}
-       {/* <UserDet/> */}
-       {/* <NurseryDet /> */}
-       <Nursery />
-       {/* <NurseryProfile />  */}
-       {/* <UserProfile /> */}
-     
-     {/* <PlantRecomm />   */}
-     {/* <Login /> */}
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/signup" element={<UserDet />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/nurserysignup" element={<NurseryDet />} />
+        <Route path="/airquality" element={<AirQuality />} />
+        <Route path="/plantrecom" element={<PlantRecomm />} />
+        <Route path="/nursery" element={<Nursery />} />
+        <Route path="/UserProfile" element={<UserProfile />} />
+        {/*  */}
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

@@ -36,15 +36,15 @@ function ProdDesc() {
           alt="imagesforreact"
         />
         <div className="prodTextRight">
-          <h1>Lorem Ipsum</h1>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <h3>Check Air Quality Index</h3>
+          <p>Get real-time air quality data for your location and stay informed about the air you breathe.</p>
         </div>
       </div>
 
       <div className="cont2 reveal" ref={(el) => (revealElements.current[1] = el)}>
         <div className="prodTextLeft">
-          <h1>Lorem Ipsum</h1>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <h3>Discover Plant Recommendations</h3>
+          <p>Find the perfect plants for your home or garden based on your preferences and location.</p>
         </div>
         <img
           src="https://images.unsplash.com/photo-1626024134882-b1fcdc3e9902?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHBsYW50JTIwZ3Jvd3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
@@ -63,8 +63,8 @@ function ProdDesc() {
         />
 
         <div className="prodTextRight">
-          <h1>Lorem Ipsum</h1>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <h3>Explore Local Nurseries</h3>
+          <p>Find nearby nurseries and explore a variety of plants and gardening essentials for your home.</p>
         </div>
       </div>
     </div>

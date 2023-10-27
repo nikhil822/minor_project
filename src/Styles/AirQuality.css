@@ -1,0 +1,81 @@
+.container-aq {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    text-align: center;
+}
+
+
+.remark {
+    margin: 10px;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 150px;
+    max-width: 100%;
+}
+
+.btn {
+    margin-top: 20px;
+    border-radius: 8px;
+    border: none;
+    box-sizing: border-box;
+    color: #ffffff;
+    background-color: #06545d;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #86afaf;
+    color: #06545d;
+}
+
+.poll-level {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.col1,
+.col2 {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    color: #285430;
+    font-weight: bold;
+    text-align: center;
+    /* width: 280px; */
+    border-radius: 15px;
+}
+.poll-level span {
+    margin-top: 20px;
+}
+
+.fields {
+    text-align: center;
+    color: white;
+    width: 280px;
+    background-color: #a4be7b;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transition: transform 0.2s;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+.fields:hover {
+    transform: scale(1.02);
+  }

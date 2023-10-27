@@ -9,13 +9,13 @@ export default function NurseryDet() {
         <img src="../Images/nurseryimg.png" alt="Form image" />
       </div>
       <div className="form">
-        <div className="user-icon">
+        <div className="nursery-icon">
         <i className="fa-brands fa-4x fa-pagelines"></i>       
         </div>
 
         <div className="head">NURSERY DETAILS</div>
         <div className="form-body">
-          <section className="basic">
+          <section className="nursery-basic">
 
             <div className="inp-field">
               <label htmlFor="Nname">Nursery Name</label>

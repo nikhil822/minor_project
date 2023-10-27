@@ -16,7 +16,7 @@ html {
     color: #285430;
 }
 
-.head{
+.head-user{
     text-align: center;
     color: #285430;
     font-weight: bold;
@@ -29,10 +29,9 @@ html {
     margin: 10px;
 }
 
-input,
-select {
+input,select{
     margin-top: 5px;
-    height: 37px;
+    /* height: 37px; */
     border: 1.8px solid  #285430;
     border-radius: 4px;
     padding: 10px;
@@ -87,7 +86,7 @@ img {
     object-fit: cover;
 }
 
-.reg {
+.user-reg {
     
         margin: 40px auto;
         padding: 5px 20px;
@@ -103,7 +102,7 @@ img {
         background-color: #285430;
 }
 
-.reg:hover{
+.user-reg:hover{
     color:#285430;
     background-color: #A4BE7B;
 }
@@ -132,7 +131,7 @@ img {
         transform: translateX(-50%);
         color: #285430;
     }
-    .reg {
+    .user-reg {
     
         /* margin: 40px auto; */
         padding: 20px;
@@ -149,21 +148,7 @@ img {
         background-color: #285430;
 }
 
-.reg:hover{
-    color:#285430;
-    background-color: #A4BE7B;
-}
 
-    label {
-        font-weight: bold;
-        font-size: 2.5vmin;
-        color: #285430;
-        padding: 10px;
-    }
-    ::placeholder {
-        font-size: 13px;
-        padding: 5px;
-    }
 
     .main {
         flex-direction: column;

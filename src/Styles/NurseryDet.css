@@ -8,7 +8,7 @@ body,
 html {
     overflow-x: hidden;
 }
-.user-icon{
+.nursery-icon{
     margin: 0 auto;
     padding: 5px 20px;
     margin-left: 63%; 
@@ -21,23 +21,23 @@ html {
     font-weight: bold;
 
 }
-.basic{
+.nursery-basic{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 8px;
 }
 
-input,
+.nursery-basic input,
 select {
     margin-top: 5px;
-    height: 33px;
+    /* height: 33px; */
     border: 1.8px solid  #011e31;
     border-radius: 4px;
     padding: 10px;
 }
 
-label {
+.nursery-basic label {
     font-weight: bold;
     font-size: 2.4vmin;
     color: #011e31;
@@ -113,12 +113,12 @@ img {
     .inp-field {
         width: calc(100% - 15px);
     }
-   .user-icon{
+   .nursery-icon{
     margin: 0 auto;
     padding: 5px 20px;
     margin-left: 60%; /* Adjust margin-left based on your design */
     transform: translateX(-50%);
-    color: #285430;
+   
    }
    .image{
     display: none;
@@ -131,12 +131,12 @@ img {
         flex-direction: column;
     }
 
-    .user-icon{
+    .nursery-icon{
         margin: 0 auto;
         padding: 5px 20px;
         margin-left: 60%; /* Adjust margin-left based on your design */
         transform: translateX(-50%);
-        color: #285430;
+       
        }
        .image{
         display: none;
