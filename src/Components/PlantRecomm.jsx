@@ -1,29 +1,31 @@
-import  { useEffect, useState } from 'react';
-import '../Styles/PlantRecomm.css'; // Import your CSS file
+import { useEffect, useState } from "react";
+import "../Styles/PlantRecomm.css"; // Import your CSS file
+import { useNavigate } from "react-router-dom";
 
 const MyComponent = () => {
   const [jsonData, setJsonData] = useState(null);
+  const navigate = useNavigate()
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('./Plants.json');
+        const response = await fetch("./Plants.json");
         const data = await response.json();
         setJsonData(data);
       } catch (error) {
-        console.error('Error fetching or parsing data: ', error);
+        console.error("Error fetching or parsing data: ", error);
       }
     };
 
     fetchData();
-  }, []); 
+  }, []);
 
   return (
     <div className="centered-content">
-      <h1 className='heading'>Plant Recommendation</h1>
-      <div className='recomm-info'>
-        <div className='info'>Area:</div>
-        <div className='info'>Suitability:</div>
+      <h1 className="heading">Plant Recommendation</h1>
+      <div className="recomm-info">
+        <div className="info">Area:</div>
+        <div className="info">Suitability:</div>
       </div>
       <div className="plant-container">
         {jsonData ? (
@@ -43,7 +45,9 @@ const MyComponent = () => {
           <p>Loading...</p>
         )}
       </div>
-      <div className='recomm-btn-cont'><button className='recomm-btn'>VIEW NEARBY NURSERY</button></div>
+      <div className="recomm-btn-cont">
+        <button className="recomm-btn" onClick={() => navigate('/nursery')}>VIEW NEARBY NURSERY</button>
+      </div>
     </div>
   );
 };

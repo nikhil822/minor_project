@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import "../Styles/UserDet.css";
 
 export default function UserDet() {
+  const navigate = useNavigate()
+
   return (
     <div className="main">
       <div className="image">
@@ -85,7 +88,7 @@ export default function UserDet() {
            
           </section>
 
-          <button className="reg" href="#">
+          <button className="reg" onClick={() => navigate('/airquality')}>
             REGISTER
           </button>
         </div>

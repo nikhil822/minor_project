@@ -1,9 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import "../Styles/Landing.css";
 import ProdDesc from "./ProdDesc";
 import Footer from "./Footer";
 
 function Landing() {
+  const navigate = useNavigate()
+
   return (
     <>
       <Navbar />
@@ -18,8 +21,8 @@ function Landing() {
           </p>
           <div>
             <h2>JOIN US AS </h2>
-          <button className="join-btn">CONTRIBUTOR</button>
-          <button className="join-btn">NURSERY OWNER</button>
+          <button className="join-btn" onClick={() => navigate('/signup')}>CONTRIBUTOR</button>
+          <button className="join-btn" onClick={() => navigate('/nurserysignup')}>NURSERY OWNER</button>
           </div>
           
         </div>
