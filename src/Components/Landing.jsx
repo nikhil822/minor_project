@@ -10,7 +10,6 @@ function Landing() {
       <div className="container-top">
         <img src="../Images/leafbg.png" className="cont-top" alt="Background" />
         <div className="text-overlay">
-          {/* <h2>ECORELEAF</h2> */}
           <h3 className="quote-top">“To plant a garden is to believe in tomorrow.”</h3>
 
           <p>

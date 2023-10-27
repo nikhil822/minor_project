@@ -39,7 +39,7 @@ h2{
     transform: translate(-50%, -50%);
     text-align: center;
     color: white; 
-    background-color: rgba(0, 0, 0, 0.7); 
+    /* background-color: rgba(0, 0, 0, 0.7);  */
     padding: 20px; 
   }
   
@@ -47,33 +47,51 @@ h2{
     margin: 0;
     font-size: 24px;}
   
-.feature-cont{
-
-    display:flex;
-    padding:30px;
-}    
-.feature{
-    padding:40px; 
-    margin-left:15px;
-    border-radius:10px;
-    background-color: #A4BE7B;
-    color:#285430;
-
-}
-.feature:hover{
-  background: url('../Images/leafbg.png') ;
-  color: white;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
-}
-.num{
-    font-size:40px;
-    font-weight:bold;
-    color:#fff;
-    background-color: #285430;
-    border-radius:50%;
-    height:60px;
-    width:60px;
-    padding:6px;
-    margin:10px;
-}
+    .feature-cont {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 15px;
+  }
+  
+  .feature {
+      flex: 1 1 calc(30% - 30px);
+      margin: 15px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #A4BE7B;
+      color: #285430;
+      text-align: center;
+      transition: all 0.3s ease;
+  }
+  
+  .feature:hover {
+      background: url('../Images/leafbg.png');
+      color: white;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  
+  .num {
+      font-size: 40px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #285430;
+      border-radius: 50%;
+      height: 60px;
+      width: 60px;
+      padding: 6px;
+      margin: 10px;
+  }
+  
+  @media (max-width: 1200px) {
+      .feature {
+          flex: 1 1 calc(45% - 30px);
+      }
+  }
+  
+  @media (max-width: 900px) {
+      .feature {
+          flex: 1 1 calc(100% - 30px);
+      }
+  }
+  

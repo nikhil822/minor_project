@@ -1,7 +1,9 @@
 import "../Styles/NurseryDet.css";
-
+import Navbar from "../Components/Navbar"
 export default function NurseryDet() {
   return (
+    <>
+    <Navbar />
     <div className="main">
       <div className="image">
         <img src="../Images/nurseryimg.png" alt="Form image" />
@@ -81,7 +83,7 @@ export default function NurseryDet() {
             <div className="inp-field">
               <label htmlFor="photo">Upload Plant/Nursery Photo</label>
               <input
-                type="file"
+                type="file" accept="image/*"
                 id="photo"
                
               />
@@ -94,5 +96,7 @@ export default function NurseryDet() {
         </div>
       </div>
     </div>
+    </>
+    
   );
 }

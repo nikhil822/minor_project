@@ -6,12 +6,15 @@ export default function Nursery() {
     <Navbar />
       <div className="container">
         <div>
-          <form action="" className="search-bar">
-            <input type="search" name="search" pattern=".*\S.*" required />
-            <button className="search-btn" type="submit">
-            </button>
-          </form>
+        <form action="" className="search-bar">
+  <input type="search" name="search" pattern=".*\S.*" required placeholder="Search..." />
+  <button className="search-btn" type="submit">
+    <i className="fa-solid fa-search"></i>
+  </button>
+</form>
+
         </div>
+
         <div className="nursery-desc">
           <img src="../Images/dam.png" alt="plant" className="n-img" />
 
@@ -24,8 +27,8 @@ export default function Nursery() {
             <p>
               <span>Phone:</span> 8457091946
             </p>
-            <p>
-              <span>View Loction:</span>{" "}
+            <p className="nursery-loc">
+              <span>View Loction:</span>
               <a href="https://maps.app.goo.gl/yNnvnGDETbPUa7WAA">
                 Dam Nursery
               </a>
@@ -45,7 +48,7 @@ export default function Nursery() {
             <p>
               <span>Phone:</span> 9777225224
             </p>
-            <p>
+            <p className="nursery-loc">
               <span>View Location:</span>
               <a href="https://maps.app.goo.gl/z2vLCU2okLK5P7RZ8">
                 Plants villa
@@ -66,7 +69,7 @@ export default function Nursery() {
             <p>
               <span>Phone:</span> 9857091946
             </p>
-            <p>
+            <p className="nursery-loc">
               <span>View Location:</span>
               <a href="https://maps.app.goo.gl/MS95uNnxmVwAbVv49">
                 Horticulture Nursery
@@ -74,6 +77,7 @@ export default function Nursery() {
             </p>
           </div>
         </div>
+
       </div>
     </>
   );

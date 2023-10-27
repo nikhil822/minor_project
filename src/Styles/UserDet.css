@@ -8,12 +8,14 @@ body,
 html {
     overflow-x: hidden;
 }
-.user-icon{
+.user-icon {
     margin: 0 auto;
     padding: 5px 20px;
-    margin-left: 24em;
+    margin-left: 63%; 
+    transform: translateX(-50%);
     color: #285430;
 }
+
 .head{
     text-align: center;
     color: #285430;
@@ -24,7 +26,7 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 8px;
+    margin: 10px;
 }
 
 input,
@@ -44,7 +46,7 @@ label {
 }
 
 .main {
-    width: 100vw;
+    /* width: 90vw; */
     display: flex;
 }
 
@@ -91,7 +93,7 @@ img {
         padding: 5px 20px;
         border: none;
         border-radius: 5px;
-        color: whitesmoke;
+        color: white;
         height: 7vh;
         display: flex;
         align-items: center; 
@@ -109,33 +111,67 @@ img {
 
 
 @media only screen and (max-width:1000px) {
+    ::placeholder {
+        font-size: 2vmin;
+        padding: 5px;
+    }
+    .image{
+        display: none;
+    }
     .inp-field {
-        width: calc(100%/2 - 15px);
+        width: calc(100% - 15px);
     }
-    .coll{
-        width:100vw;
-    }
+   
 }
 
 @media only screen and (max-width:650px) {
+    .user-icon {
+        margin: 0 auto;
+        padding: 5px 20px;
+        margin-left: 60%; /* Adjust margin-left based on your design */
+        transform: translateX(-50%);
+        color: #285430;
+    }
+    .reg {
+    
+        /* margin: 40px auto; */
+        padding: 20px;
+        border: none;
+        border-radius: 5px;
+        color: whitesmoke;
+        height: 7vh;
+        width: 24vh;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        text-align: center;
+        font-size: 19px;
+        background-color: #285430;
+}
+
+.reg:hover{
+    color:#285430;
+    background-color: #A4BE7B;
+}
+
+    label {
+        font-weight: bold;
+        font-size: 2.5vmin;
+        color: #285430;
+        padding: 10px;
+    }
+    ::placeholder {
+        font-size: 13px;
+        padding: 5px;
+    }
 
     .main {
         flex-direction: column;
     }
 
-    .image {
-        width: 100vw;
-        height: 30vh;
-        object-fit: cover;
-        background-color: #c8e3f3;
-
+     .image{
+        display: none;
     }
-
-    img {
-        display: flex;
-        margin: 0 auto;
-    }
-
     .inp-field {
         width: calc(100% - 15px);
 

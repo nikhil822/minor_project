@@ -1,43 +1,29 @@
 import "../Styles/Nurseryprofile.css";
 
-export default function NurseryProfile() {
+export default function UserProfile() {
   return (
     <>
-      <h3 className="profile-head">Your Nursery Profile</h3>
+      <h3 className="profile-head">Your Profile</h3>
       <div className="profile-container">
-      <div className="profile-image-container">
-  <img
-    src="https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bnVyc2VyeSUyMGdhcmRlbnxlbnwwfHwwfHx8MA%3D%3D"
-    alt="Profile"
-    className="profile-image"
-  />
-  <div className="image-overlay">
-    <button className="edit-pic-btn">
-      <i className="fa-solid fa-pen-to-square fa-2x"></i>Edit Photo
-    </button>
-  </div>
-</div>
-
+        <div className="profile-image-container">
+          <img
+            src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527_1280.png"
+            className="profile-image"
+          />
+          <div className="image-overlay">
+            <button className="edit-pic-btn">
+              <i className="fa-solid fa-pen-to-square fa-2x"></i>Edit Photo
+            </button>
+          </div>
+        </div>
 
         <div className="profile-content">
           <div className="profile-item">
             <span>
-              <i className="fa-brands fa-pagelines fa-2x"></i>
+            <i className="fa-solid fa-circle-user fa-2x"></i>
             </span>
             <span>
-              Nursery Name: <span>ABC</span>
-            </span>
-            <button className="edit-btn">
-              <i className="fa-solid fa-pen-to-square fa-2x"></i>
-            </button>
-          </div>
-
-          <div className="profile-item">
-            <span>
-              <i className="fa-solid fa-user fa-2x"></i>
-            </span>
-            <span>
-              Owner Name: <span>ABC</span>
+               Name: <span>ABC</span>
             </span>
             <button className="edit-btn">
               <i className="fa-solid fa-pen-to-square fa-2x"></i>
@@ -61,7 +47,7 @@ export default function NurseryProfile() {
               <i className="fa-solid fa-location-dot fa-2x"></i>
             </span>
             <span>
-              Address: <span>ABC</span>
+             Address: <span>ABC</span>
             </span>
             <button className="edit-btn">
               <i className="fa-solid fa-pen-to-square fa-2x"></i>
@@ -70,16 +56,27 @@ export default function NurseryProfile() {
 
           <div className="profile-item">
             <span>
-              <i className="fa-solid fa-seedling fa-2x"></i>
+              <i className="fa-solid fa-map-pin fa-2x"></i>
             </span>
             <span>
-              Plant Speciality: <span>ABC</span>
+              Pin Code: <span>ABC</span>
             </span>
             <button className="edit-btn">
               <i className="fa-solid fa-pen-to-square fa-2x"></i>
             </button>
           </div>
 
+          <div className="profile-item">
+            <span>
+              <i className="fa-solid fa-magnifying-glass-location fa-2x"></i>
+            </span>
+            <span>
+             Type of Location: <span>ABC</span>
+            </span>
+            <button className="edit-btn">
+              <i className="fa-solid fa-pen-to-square fa-2x"></i>
+            </button>
+          </div>
         </div>
       </div>
     </>

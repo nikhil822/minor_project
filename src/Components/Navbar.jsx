@@ -9,10 +9,9 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${mobileMenuOpen ? 'collapsed' : ''}`}>
       <div className="logo">EcoReleaf</div>
       <ul className={`nav-list ${mobileMenuOpen ? 'open' : ''}`}>
-        <li><a href="#">Home</a></li>
         <li><a href="#">SignUp</a></li>
         <li><a href="#">Login</a></li>
         <li><a href="#">About</a></li>

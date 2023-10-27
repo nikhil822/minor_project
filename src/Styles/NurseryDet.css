@@ -10,8 +10,9 @@ html {
 }
 .user-icon{
     margin: 0 auto;
-    padding: 2px 20px;
-    margin-left: 24em;
+    padding: 5px 20px;
+    margin-left: 63%; 
+    transform: translateX(-50%);
     color: #011e31;
 }
 .head{
@@ -110,11 +111,18 @@ img {
 
 @media only screen and (max-width:1000px) {
     .inp-field {
-        width: calc(100%/2 - 15px);
+        width: calc(100% - 15px);
     }
-    .coll{
-        width:100vw;
-    }
+   .user-icon{
+    margin: 0 auto;
+    padding: 5px 20px;
+    margin-left: 60%; /* Adjust margin-left based on your design */
+    transform: translateX(-50%);
+    color: #285430;
+   }
+   .image{
+    display: none;
+   }
 }
 
 @media only screen and (max-width:650px) {
@@ -123,18 +131,16 @@ img {
         flex-direction: column;
     }
 
-    .image {
-        width: 100vw;
-        height: 30vh;
-        object-fit: cover;
-        background-color: #c8e3f3;
-
-    }
-
-    img {
-        display: flex;
+    .user-icon{
         margin: 0 auto;
-    }
+        padding: 5px 20px;
+        margin-left: 60%; /* Adjust margin-left based on your design */
+        transform: translateX(-50%);
+        color: #285430;
+       }
+       .image{
+        display: none;
+       }
 
     .inp-field {
         width: calc(100% - 15px);
