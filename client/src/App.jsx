@@ -9,6 +9,8 @@ import AirQuality from "./Components/AirQuality";
 import Login from "./Components/Login";
 import PlantRecomm from "./Components/PlantRecomm";
 import Nursery from "./Components/Nursery";
+import NurseryProfile from "./Components/NurseryProfile";
+
 function App() {
   return (
     <BrowserRouter>
@@ -21,6 +23,7 @@ function App() {
         <Route path="/plantrecom" element={<PlantRecomm />} />
         <Route path="/nursery" element={<Nursery />} />
         <Route path="/UserProfile" element={<UserProfile />} />
+        <Route path="/nurseryprofile" element={<NurseryProfile />} />
         {/*  */}
       </Routes>
     </BrowserRouter>
