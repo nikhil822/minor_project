@@ -1,6 +1,9 @@
 import "../Styles/NurseryDet.css";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../Components/Navbar"
 export default function NurseryDet() {
+  const navigate = useNavigate()
+
   return (
     <>
     <Navbar />
@@ -21,6 +24,7 @@ export default function NurseryDet() {
               <label htmlFor="Nname">Nursery Name</label>
               <input type="text" id="fname" placeholder="Enter Nursery Name" />
             </div>
+
             <div className="inp-field">
             <label htmlFor="ownername">Owner Name</label>
               <input type="text" id="lname" placeholder="Enter Owner Name" />
@@ -34,14 +38,17 @@ export default function NurseryDet() {
                 placeholder="Enter Phone Number"
               />
             </div>
+
             <div className="inp-field">
               <label htmlFor="email">Email</label>
               <input type="email" id="email" placeholder="Enter Email" />
             </div>
+
             <div className="inp-field">
               <label htmlFor="password">Password</label>
               <input type="password" id="pwd" placeholder="Enter Password" />
             </div>
+
             <div className="inp-field">
               <label htmlFor="confirmPwd">Confirm Password</label>
               <input type="password" id="confirmPwd" placeholder="Confirm Password" />
@@ -55,6 +62,7 @@ export default function NurseryDet() {
                 placeholder="Enter address"
               />
             </div>
+
             <div className="inp-field">
               <label htmlFor="state">State</label>
               <input
@@ -63,6 +71,7 @@ export default function NurseryDet() {
                 placeholder="Enter State"
               />
             </div>
+
             <div className="inp-field">
               <label htmlFor="city">City</label>
               <input
@@ -71,6 +80,7 @@ export default function NurseryDet() {
                 placeholder="Enter City"
               />
             </div>
+
             <div className="inp-field">
               <label htmlFor="loc">Plant Speciality</label>
               <select>
@@ -80,6 +90,7 @@ export default function NurseryDet() {
                 <option>Others</option>
               </select>
             </div>
+
             <div className="inp-field">
               <label htmlFor="photo">Upload Plant/Nursery Photo</label>
               <input
@@ -88,9 +99,20 @@ export default function NurseryDet() {
                
               />
             </div>
+
+            <div className="inp-field">
+              <label htmlFor="g-loc">Enter Google map Location</label>
+              <input
+                type="text" 
+                placeholder="https://maps.app.goo.gl/XYZ"
+                id="g-loc"
+               
+              />
+            </div>
+
           </section>
 
-          <button className="reg" href="#">
+          <button className="reg" href="#" onClick={() => navigate('/nurseryProfile')}>
             ENLIST NURSERY
           </button>
         </div>
