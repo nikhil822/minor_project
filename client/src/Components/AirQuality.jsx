@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "../Styles/AirQuality.css";
+import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
 
 const urlLocation =
@@ -88,6 +89,7 @@ const AirQuality = () => {
 
   return (
     <>
+    <Navbar />
       <div className="container-aq">
         <h1 className="head">AQI</h1>
         <h3>{name}</h3>

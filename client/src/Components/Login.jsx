@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from 'axios'
 import { loginRoute } from "../utils/APIRoutes";
+import Navbar from "./Navbar";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -69,8 +70,12 @@ const Login = () => {
 
   return (
     <>
+    <Navbar />
+  
       <div className="login-container">
-        <h2>Login</h2>
+      <div className="login-header">
+          <h2>Login</h2>
+        </div>
         <form className="login-form" onSubmit={(e) => handleSubmit(e)}>
           <label htmlFor="email">Email</label>
           <input
@@ -91,6 +96,8 @@ const Login = () => {
           <button type="submit">
             Login
           </button>
+          <p className="login-alt">Not a user? <a href="/">Register</a></p>
+
         </form>
       </div>
       <ToastContainer />

@@ -197,21 +197,25 @@ export default function UserDet() {
                   />
                 </div>
                 <div className="inp-field">
-                  <label htmlFor="loc">Type of Location</label>
-                  <select name="location">
-                    <option value="Balcony">Balcony</option>
-                    <option value="Garden">Garden</option>
-                    <option value="Farm">Farm</option>
-                  </select>
+                  <label>Type of Location</label>
+                  <div className="checkbox-group">
+                    <label>
+                      <input type="checkbox" value="Balcony" />
+                      Balcony
+                    </label>
+                    <label>
+                      <input type="checkbox" value="Garden" />
+                      Garden
+                    </label>
+                    <label>
+                      <input type="checkbox" value="Farm" />
+                      Farm
+                    </label>
+                  </div>
                 </div>
               </section>
 
-              <button
-                className="user-reg"
-                
-              >
-                REGISTER
-              </button>
+              <button className="user-reg">REGISTER</button>
             </div>
           </div>
         </form>

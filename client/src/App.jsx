@@ -10,6 +10,8 @@ import Login from "./Components/Login";
 import PlantRecomm from "./Components/PlantRecomm";
 import Nursery from "./Components/Nursery";
 import NurseryProfile from "./Components/NurseryProfile";
+import WishList from "./Components/WishList";
+import NurseryDetails from "./Components/NurseryDetails";
 
 function App() {
   return (
@@ -24,7 +26,9 @@ function App() {
         <Route path="/nursery" element={<Nursery />} />
         <Route path="/UserProfile" element={<UserProfile />} />
         <Route path="/nurseryprofile" element={<NurseryProfile />} />
-        {/*  */}
+        <Route path="/wishlist" element={ <WishList  />} />
+        <Route path="/nurseryDetails" element={ <NurseryDetails />} />
+
       </Routes>
     </BrowserRouter>
   );

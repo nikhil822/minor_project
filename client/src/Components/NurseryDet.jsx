@@ -195,18 +195,51 @@ export default function NurseryDet() {
                   />
                 </div>
                 <div className="inp-field">
-                  <label htmlFor="loc">Plant Speciality</label>
-                  <select>
-                    <option>Herbal Plants</option>
-                    <option>Floral Plants</option>
-                    <option>vegetables</option>
-                    <option>Others</option>
-                  </select>
+                  <label>Plant Speciality</label>
+                  <div className="checkbox-group">
+                    <label>
+                      <input type="checkbox" value="Herbal Plants" />
+                      Herbal Plants
+                    </label>
+                    <label>
+                      <input type="checkbox" value="Floral Plants" />
+                      Floral Plants
+                    </label>
+                    <label>
+                      <input type="checkbox" value="Vegetables" />
+                      Vegetables
+                    </label>
+                    <label>
+                      <input type="checkbox" value="Others" />
+                      Others
+                    </label>
+                  </div>
                 </div>
+
                 <div className="inp-field">
                   <label htmlFor="photo">Upload Plant/Nursery Photo</label>
                   <input type="file" accept="image/*" id="photo" />
                 </div>
+
+                <div className="inp-field">
+                  <label htmlFor="google-loc">Enter Google location</label>
+                  <input type="text" id="google-loc" placeholder="https://maps.app.goo.gl/ABC" />
+                </div>
+
+                <div className="inp-field">
+                  <label htmlFor="Delivery">Do you deliver</label>
+                  <select>
+                  <option>Choose an option</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    
+                  </select>
+                </div>
+                <div className="inp-field">
+                  <label htmlFor="price-range">Enter Price range</label>
+                  <input type="tel" id="price-range" placeholder="eg Rs 300 - 400" />
+                </div>
+
               </section>
 
               <button className="reg">ENLIST NURSERY</button>

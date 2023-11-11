@@ -31,7 +31,6 @@ html {
 
 input,select{
     margin-top: 5px;
-    /* height: 37px; */
     border: 1.8px solid  #285430;
     border-radius: 4px;
     padding: 10px;
@@ -104,10 +103,27 @@ img {
 
 .user-reg:hover{
     color:#285430;
-    background-color: #A4BE7B;
+    /* background-color: #A4BE7B; */
 }
 
-
+.checkbox-group {
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 200;
+    font-size: 2vmin;
+    transition: background-color 0.3s ease;
+  }
+  .inp-field {
+    margin-bottom: 20px;
+  }
+  /* .checkbox-group label:hover {
+    background-color: #f9f9f9;
+  } */
+  
+  input [type="checkbox"]{
+    padding: 3px;
+  }
 
 @media only screen and (max-width:1000px) {
     ::placeholder {
@@ -127,14 +143,12 @@ img {
     .user-icon {
         margin: 0 auto;
         padding: 5px 20px;
-        margin-left: 60%; /* Adjust margin-left based on your design */
+        margin-left: 60%; 
         transform: translateX(-50%);
         color: #285430;
     }
     .user-reg {
-    
-        /* margin: 40px auto; */
-        padding: 20px;
+            padding: 20px;
         border: none;
         border-radius: 5px;
         color: whitesmoke;

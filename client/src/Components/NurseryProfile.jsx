@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../Styles/Nurseryprofile.css";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 
 export default function NurseryProfile() {
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ export default function NurseryProfile() {
   // console.log(currentUser.ownername);
   return (
     <>
+    <Navbar />
       <h3 className="profile-head">Your Nursery Profile</h3>
       <div className="profile-container">
         <div className="profile-image-container">
@@ -51,6 +53,20 @@ export default function NurseryProfile() {
               </button>
             </div>
 
+        <div className="profile-content">
+          
+          <div className="profile-item">
+            <span>
+              <i className="fa-brands fa-pagelines fa-2x"></i>
+            </span>
+            <span>
+              Nursery Name: <span>ABC</span>
+            </span>
+            <button className="edit-btn">
+              <i className="fa-solid fa-pen-to-square fa-2x"></i>
+            </button>
+          </div>
+
             <div className="profile-item">
               <span>
                 <i className="fa-solid fa-user fa-2x"></i>
@@ -77,7 +93,7 @@ export default function NurseryProfile() {
 
             <div className="profile-item">
               <span>
-                <i className="fa-solid fa-location-dot fa-2x"></i>
+              <i className="fa-solid fa-address-card fa-2x"></i>
               </span>
               <span>
                 Address: <span>{currentUser.address}</span>
@@ -98,7 +114,18 @@ export default function NurseryProfile() {
                 <i className="fa-solid fa-pen-to-square fa-2x"></i>
               </button>
             </div>
+            <div className="profile-item">
+            <span>
+              <i className="fa-solid fa-map-pin fa-2x"></i>
+            </span>
+            <span>
+             Google Location: <span>ABC</span>
+            </span>
+            <button className="edit-btn">
+              <i className="fa-solid fa-pen-to-square fa-2x"></i>
+            </button>
           </div>
+        </div>
         )}
       </div>
     </>
