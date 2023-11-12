@@ -1,7 +1,8 @@
 const router = require("express").Router();
-const { registerUser, nlogin, nsignup } = require("../controllers/nurseryController");
+const { nlogin, nsignup, getAllNursery } = require("../controllers/nurseryController");
 
 router.post("/nsignup", nsignup);
 router.post("/nlogin", nlogin);
+router.get("/ngetAll", getAllNursery);
 
 module.exports = router;
