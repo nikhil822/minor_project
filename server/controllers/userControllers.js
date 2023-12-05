@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 
 module.exports.signup = async (req, res, next) => {
     try {
-        const { fullname, email, password, phone, address, state, city, location, pincode } = req.body;
+        const { fullname, email, password, phone, address, state, city, location, pincode, selectedCheckboxes } = req.body;
         const emailCheck = await User.findOne({ email });
         if (emailCheck)
             return res.json({ msg: "Email already used", status: false });
@@ -17,7 +17,8 @@ module.exports.signup = async (req, res, next) => {
             state,
             city,
             location,
-            pincode
+            pincode,
+            selectedCheckboxes
         });
         delete user.password;
         return res.json({ status: true, user });

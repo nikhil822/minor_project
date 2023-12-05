@@ -59,6 +59,7 @@ label {
     width: 100%;
     height: fit-content;
     padding: 25px;
+    overflow: hidden;
 }
 
 .form-body {

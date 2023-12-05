@@ -3,9 +3,9 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import "../Styles/NurseryDet.css";
-import Navbar from "./Navbar";
 import { nRegisterRoute } from "../utils/APIRoutes";
 import { useEffect, useState } from "react";
+import NavbarWithoutLogin from "./NavbarWithoutLogin";
 
 export default function NurseryDet() {
   const navigate = useNavigate();
@@ -19,6 +19,9 @@ export default function NurseryDet() {
     address: "",
     state: "",
     city: "",
+    location: "",
+    price: "",
+    delivery:""
   });
 
   const toastOptions = {
@@ -68,7 +71,15 @@ export default function NurseryDet() {
         address,
         state,
         city,
+        location,
+        price,
+        delivery
       } = values;
+
+      const selectedCheckboxes = Array.from(
+        document.querySelectorAll('input[type="checkbox"]:checked')
+      ).map((checkbox) => checkbox.value);
+
       const { data } = await axios.post(
         nRegisterRoute,
         {
@@ -80,6 +91,10 @@ export default function NurseryDet() {
           address,
           state,
           city,
+          selectedCheckboxes,
+          location,
+          price,
+          delivery
         },
         {
           withCredentials: true,
@@ -97,7 +112,7 @@ export default function NurseryDet() {
 
   return (
     <>
-      <Navbar />
+      <NavbarWithoutLogin />
       <div className="main">
         <div className="image">
           <img src="../Images/nurseryimg.png" alt="Form image" />
@@ -218,28 +233,42 @@ export default function NurseryDet() {
 
                 <div className="inp-field">
                   <label htmlFor="photo">Upload Plant/Nursery Photo</label>
-                  <input type="file" accept="image/*" id="photo" />
+                  <input
+                    type="file"
+                    accept="image/*"
+                    id="photo"
+                  />
                 </div>
 
                 <div className="inp-field">
                   <label htmlFor="google-loc">Enter Google location</label>
-                  <input type="text" id="google-loc" placeholder="https://maps.app.goo.gl/ABC" />
+                  <input
+                    type="text"
+                    id="google-loc"
+                    name="location"
+                    placeholder="https://maps.app.goo.gl/ABC"
+                    onChange={(e) => handleChange(e)}
+                  />
                 </div>
 
                 <div className="inp-field">
                   <label htmlFor="Delivery">Do you deliver</label>
-                  <select>
-                  <option>Choose an option</option>
+                  <select name="delivery" onChange={(e) => handleChange(e)}>
+                    <option>Choose an option</option>
                     <option>Yes</option>
                     <option>No</option>
-                    
                   </select>
                 </div>
                 <div className="inp-field">
                   <label htmlFor="price-range">Enter Price range</label>
-                  <input type="tel" id="price-range" placeholder="eg Rs 300 - 400" />
+                  <input
+                    type="tel"
+                    id="price-range"
+                    name="price"
+                    placeholder="eg Rs 300 - 400"
+                    onChange={(e) => handleChange(e)}
+                  />
                 </div>
-
               </section>
 
               <button className="reg">ENLIST NURSERY</button>

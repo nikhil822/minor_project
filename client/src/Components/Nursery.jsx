@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import "../Styles/Nursery.css";
-import Navbar from "./Navbar";
-import { useNavigate } from "react-router-dom";
+// import Navbar from "./NavbarWithLogin";
+import { Link, useNavigate } from "react-router-dom";
+import NavbarWithLogin from "./NavbarWithLogin";
 
 export default function Nursery() {
   const navigate = useNavigate();
@@ -29,7 +30,7 @@ export default function Nursery() {
 
   return (
     <>
-      <Navbar />
+      <NavbarWithLogin />
       <div className="container">
         {/* search bar */}
         <div>
@@ -67,13 +68,12 @@ export default function Nursery() {
                     <div className="n-detail">
                       <i className="fa-solid fa-location-dot n-icon fa-2xl"></i>
                       <span>View Location:</span>
-                      <a href="https://maps.app.goo.gl/T9k5Xnio4dPidgVg6">
-                        https://maps.app.goo.gl/T9k5Xnio4dPidgVg6
-                      </a>
+                      <Link to="https://maps.app.goo.gl/T9k5Xnio4dPidgVg6" />
+                      
                     </div>
 
                     <div className="n-detail">
-                      <button onClick={() => navigate("/nurseryDetails")}>
+                      <button onClick={() => navigate(`/nurseryDetails/${d._id}`)}>
                         VIEW DETAILS
                       </button>
                     </div>

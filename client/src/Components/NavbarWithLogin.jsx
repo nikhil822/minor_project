@@ -1,18 +1,23 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../Styles/Navbar.css";
 
-function Navbar() {
+function NavbarWithLogin() {
+  const navigate = useNavigate()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  const handleLogout = () => {
+    localStorage.clear();
+    navigate('/')
+  }
+
   return (
     <nav className={`navbar ${mobileMenuOpen ? "collapsed" : ""}`}>
       <div className="logo">
-        {/* <img src="../Images/reserve.png" className='logo-img' alt="rev" /> */}
         EcoReleaf
       </div>
       <ul className={`nav-list ${mobileMenuOpen ? "open" : ""}`}>
@@ -27,33 +32,15 @@ function Navbar() {
         </div>
         <div >
           <li>
-            <Link to="/signup" className="nav-elements">
-              <i className="fa-solid fa-user-plus"></i>
-              <span>Sign Up</span>
-            </Link>
-          </li>
-        </div>
-        <div >
-          <li>
-            <Link to="/login" className="nav-elements">
-              <i className="fa-solid fa-right-to-bracket"></i>
-              <span>Login</span>
-            </Link>
-          </li>
-        </div>
-        <div >
-          <li>
             <Link to="/UserProfile" className="nav-elements">
               <i className="fa-solid fa-circle-user"></i> 
-              <span>Profile</span>
+              <span >Profile</span>
             </Link>
           </li>
         </div>
         <div>
-          <li>
-            <Link to="/" className="nav-elements">
-              <i className="fa-solid fa-right-from-bracket"></i> <span>Logout</span>
-            </Link>
+          <li className="nav-elements">
+              <i className="fa-solid fa-right-from-bracket"></i> <span onClick={handleLogout}>Logout</span>
           </li>
         </div>
       </ul>
@@ -67,4 +54,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavbarWithLogin;

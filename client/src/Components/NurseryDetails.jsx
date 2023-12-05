@@ -1,13 +1,44 @@
-import Navbar from "./Navbar";
-import { useState } from "react";
+// import Navbar from "./Navbar";
+import { useEffect, useState } from "react";
 import "../Styles/NurseryDetails.css";
+import NavbarWithLogin from "./NavbarWithLogin";
+import { useParams } from "react-router-dom";
 
 const NurseryDetails = () => {
-  const [rating, setRating] = useState('');
+  (function (w, d) {
+    w.CollectId = "6563577c20465d1aa0f1b44b";
+    var h = d.head || d.getElementsByTagName("head")[0];
+    var s = d.createElement("script");
+    s.setAttribute("type", "text/javascript");
+    s.async = true;
+    s.setAttribute("src", "https://collectcdn.com/launcher.js");
+    h.appendChild(s);
+  })(window, document);
+
+  const { nurseryId } = useParams();
+  const [rating, setRating] = useState("");
   const [hasSubmittedRating, setHasSubmittedRating] = useState(false);
+  const [nurseryDetails, setNurseryDetails] = useState(null);
+  console.log(nurseryId);
+
+  useEffect(() => {
+    const fetchNurseryDetails = async () => {
+      try {
+        const res = await fetch(
+          `http://localhost:5001/api/authn/nursery/${nurseryId}`
+        );
+        const data = await res.json();
+        console.log(data.nurseryname);
+        setNurseryDetails(data);
+      } catch (error) {
+        console.error("Error fetching nursery details:", error);
+      }
+    };
+
+    fetchNurseryDetails();
+  }, [nurseryId]);
 
   const handleRatingSubmit = () => {
-    
     setHasSubmittedRating(true);
   };
 
@@ -29,28 +60,25 @@ const NurseryDetails = () => {
     setRating(rating);
   };
 
-  
-
   return (
     <>
-      <Navbar />
+      <NavbarWithLogin />
       <div className="Nursery-det-container">
         <div className="nursery-img">
           <img src="../Images/dam.png" alt="plant" />
         </div>
 
         <div className="nursery-det">
-          <h2>DAM NURSERY - CENTRAL LINE BURLA</h2>
+          <h2>{nurseryDetails.nurseryname}</h2>
           <div className="n-details">
             <div className="ny-detail">
               <i className="fa-solid fa-address-card n-icon fa-2xl"></i>
-              <span>Address:</span> Central line burla, power house road, Burla,
-              Odisha 768017
+              {/* <span>Address:</span> {nurseryDetails.address} */}
             </div>
 
             <div className="ny-detail">
               <i className="fa-solid fa-square-phone n-icon fa-2xl"></i>
-              <span>Phone:</span> 8457091946
+              {/* <span>Phone:</span> {nurseryDetails.phone} */}
             </div>
 
             <div className="ny-detail">
@@ -88,8 +116,8 @@ const NurseryDetails = () => {
           <div className="rating">{stars}</div>
           <button onClick={handleRatingSubmit}>Submit Rating</button>
           {hasSubmittedRating && (
-        <div className="thank-you-message">Thank you for your review! </div>
-      )}
+            <div className="thank-you-message">Thank you for your review! </div>
+          )}
         </div>
       </div>
 

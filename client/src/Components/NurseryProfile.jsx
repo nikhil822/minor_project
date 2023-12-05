@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import "../Styles/Nurseryprofile.css";
 import { useNavigate } from "react-router-dom";
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
+import NavbarWithLogin from "./NavbarWithLogin";
 
 export default function NurseryProfile() {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ export default function NurseryProfile() {
 
   return (
     <>
-      <Navbar />
+      <NavbarWithLogin />
       <h3 className="profile-head">Your Nursery Profile</h3>
       <div className="profile-container">
         <div className="profile-image-container">
@@ -93,23 +94,13 @@ export default function NurseryProfile() {
                 <i className="fa-solid fa-seedling fa-2x"></i>
               </span>
               <span>
-                Plant Speciality: <span>ABC</span>
+                Plant Speciality: <span>{currentUser.selectedCheckboxes?.join(', ')}</span>
               </span>
               <button className="edit-btn">
                 <i className="fa-solid fa-pen-to-square fa-2x"></i>
               </button>
             </div>
-            <div className="profile-item">
-              <span>
-                <i className="fa-solid fa-map-pin fa-2x"></i>
-              </span>
-              <span>
-                Google Location: <span>ABC</span>
-              </span>
-              <button className="edit-btn">
-                <i className="fa-solid fa-pen-to-square fa-2x"></i>
-              </button>
-            </div>
+            
           </div>
         )}
       </div>

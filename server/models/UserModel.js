@@ -40,7 +40,10 @@ const userSchema = new mongoose.Schema({
   location: {
     type: String,
   },
-  
+  selectedCheckboxes: {
+    type: [String],
+    default: [],
+  },
 });
 
 module.exports = mongoose.model("minorUser", userSchema);

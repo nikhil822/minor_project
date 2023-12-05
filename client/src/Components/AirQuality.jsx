@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import "../Styles/AirQuality.css";
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
+import NavbarWithLogin from "./NavbarWithLogin";
 
-const urlLocation =
-  // `https://api.openweathermap.org/geo/1.0/zip?zip=301019,IN&appid=${import.meta.env.REACT_APP_API_KEY}`;
-  `https://api.openweathermap.org/geo/1.0/zip?zip=768018,IN&appid=0223c39a61c5120938eb1733b306d0b1`;
+const urlLocation = `https://api.openweathermap.org/geo/1.0/zip?zip=768018,IN&appid=0223c39a61c5120938eb1733b306d0b1`;
 
 const AirQuality = () => {
   const [name, setName] = useState();
   const [aqi, setAqi] = useState({});
   const [status, setStatus] = useState();
+  const [pin, setPin] = useState();
   const navigate = useNavigate();
   let longitude, latitude;
 
@@ -18,6 +18,9 @@ const AirQuality = () => {
     const fetch = async () => {
       if (!localStorage.getItem("user-app")) {
         navigate("/login");
+      } else {
+        const p = localStorage.getItem("user-app");
+        setPin(p.pincode);
       }
     };
     fetch();
@@ -30,7 +33,6 @@ const AirQuality = () => {
       setName(data.name);
       longitude = data.lon;
       latitude = data.lat;
-      // console.log(data)
     };
     api().then(() => {
       api1();
@@ -40,10 +42,10 @@ const AirQuality = () => {
   const api1 = async () => {
     if (latitude && longitude) {
       const response = await fetch(
-        // `https://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${longitude}&appid=${import.meta.env.REACT_APP_API_KEY}`
         `https://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${longitude}&appid=0223c39a61c5120938eb1733b306d0b1`
       );
       const dat = await response.json();
+      console.log(dat);
       const aqiData = dat.list[0].components;
       if (
         (aqiData.so2 >= 0 && aqiData.so2 < 20) ||
@@ -83,13 +85,12 @@ const AirQuality = () => {
 
       console.log(aqiData);
       setAqi(aqiData);
-      // console.log(aqi)
     }
   };
 
   return (
     <>
-    <Navbar />
+      <NavbarWithLogin />
       <div className="container-aq">
         <h1 className="head">AQI</h1>
         <h3>{name}</h3>
@@ -128,7 +129,10 @@ const AirQuality = () => {
             <div className="fields">{aqi.nh3}</div>
           </div>
         </div>
-        <button className="btn" onClick={() => navigate("/plantrecom")}>
+        <button
+          className="btn"
+          onClick={() => navigate("/plantrecom", { state: { name } })}
+        >
           Recommendation
         </button>
       </div>

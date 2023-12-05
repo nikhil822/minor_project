@@ -1,10 +1,11 @@
 import "../Styles/Nurseryprofile.css";
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
+import NavbarWithLogin from "./NavbarWithLogin";
 
 export default function UserProfile() {
   return (
     <>
-    <Navbar />
+    <NavbarWithLogin />
       <h3 className="profile-head">Your Profile</h3>
       <div className="profile-container">
         <div className="profile-image-container">

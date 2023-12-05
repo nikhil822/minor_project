@@ -2,28 +2,60 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../Styles/PlantRecomm.css";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import Navbar from "./Navbar";
+import { useLocation, useNavigate } from "react-router-dom";
+// import Navbar from "./Navbar";
+import NavbarWithLogin from "./NavbarWithLogin";
 
 const MyComponent = () => {
+  const {state} = useLocation()
+  const nameFromAirQuality = state && state.name;
+  // console.log(state)
   const [jsonData, setJsonData] = useState(null);
   const [wishlist, setWishlist] = useState([]);
+  const [selectBox, setSelectBox] = useState()
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const fetch = async () => {
+      if (!localStorage.getItem("user-app")) {
+        navigate("/login");
+      }
+      else {
+        const p = localStorage.getItem("user-app")
+        const userAppObject = JSON.parse(p);
+        // console.log(userAppObject.selectedCheckboxes)
+        if (userAppObject && userAppObject.selectedCheckboxes) {
+          setSelectBox(userAppObject.selectedCheckboxes);
+        } else {
+          console.error("Invalid user-app data in local storage");
+          // Handle the case where the data is incomplete or invalid
+        }
+      }
+    };
+    fetch();
+  }, []);
+
+  // console.log(selectBox)
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch("./Plants.json");
         const data = await response.json();
-        setJsonData(data);
+        console.log(data)
+        
+        const filteredData = data.filter((item) => {
+          return selectBox.includes(item.suitability)
+        })
+        setJsonData(filteredData);
+        
       } catch (error) {
         console.error("Error fetching or parsing data: ", error);
       }
     };
 
     fetchData();
-  }, []);
-
+  }, [selectBox]);
+  
   const addToWishlist = (plant) => {
     setWishlist([...wishlist, plant]);
     toast.success("Item added to wishlist!", {
@@ -46,11 +78,11 @@ const MyComponent = () => {
 
   return (
     <div className="centered-content">
-      <Navbar />
+      <NavbarWithLogin />
       <h1 className="heading">Plant Recommendation</h1>
       <div className="recomm-info">
-        <div className="info">Area:</div>
-        <div className="info">Suitability:</div>
+        <div className="info">Area: {nameFromAirQuality}</div>
+        <div className="info">Suitability: {selectBox?.join(',')}</div>
       </div>
       <div className="plant-container">
         {jsonData ? (

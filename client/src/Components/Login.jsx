@@ -3,9 +3,10 @@ import "../Styles/Login.css";
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import axios from 'axios'
+import axios from "axios";
 import { loginRoute } from "../utils/APIRoutes";
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
+import NavbarWithoutLogin from "./NavbarWithoutLogin";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -70,10 +71,10 @@ const Login = () => {
 
   return (
     <>
-    <Navbar />
-  
+      <NavbarWithoutLogin />
+
       <div className="login-container">
-      <div className="login-header">
+        <div className="login-header">
           <h2>Login</h2>
         </div>
         <form className="login-form" onSubmit={(e) => handleSubmit(e)}>
@@ -93,11 +94,10 @@ const Login = () => {
             onChange={(e) => handleChange(e)}
             required
           />
-          <button type="submit">
-            Login
-          </button>
-          <p className="login-alt">Not a user? <a href="/">Register</a></p>
-
+          <button type="submit">Login</button>
+          <p className="login-alt">
+            Not a user? <a href="/">Register</a>
+          </p>
         </form>
       </div>
       <ToastContainer />

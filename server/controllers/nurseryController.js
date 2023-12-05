@@ -1,7 +1,5 @@
 const User = require("../models/NurseryModel");
 const bcrypt = require("bcrypt");
-// const asyncHandler = require('express-async-handler')
-// const generateToken = require('../utils/generateToken')
 
 module.exports.nsignup = async (req, res, next) => {
   try {
@@ -14,6 +12,10 @@ module.exports.nsignup = async (req, res, next) => {
       address,
       state,
       city,
+      selectedCheckboxes,
+      location,
+      delivery,
+      priceRange,
     } = req.body;
     const emailCheck = await User.findOne({ email });
     if (emailCheck)
@@ -28,6 +30,10 @@ module.exports.nsignup = async (req, res, next) => {
       address,
       state,
       city,
+      selectedCheckboxes,
+      location,
+      delivery,
+      priceRange,
     });
     delete user.password;
     return res.json({ status: true, user });
@@ -60,3 +66,17 @@ module.exports.getAllNursery = async (req, res, next) => {
     res.json(err);
   }
 };
+
+module.exports.getNurseryById = async (req, res, next) => {
+  try {
+    const { nurseryId } = req.params;
+    const nursery = await User.findById(nurseryId);
+    if (!nursery) {
+      return res.status(404).json({ msg: "Nursery not found", status: false });
+    }
+    res.json(nursery);
+  } catch (error) {
+    next(error);
+  }
+};
+

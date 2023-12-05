@@ -27,7 +27,7 @@ function App() {
         <Route path="/UserProfile" element={<UserProfile />} />
         <Route path="/nurseryprofile" element={<NurseryProfile />} />
         <Route path="/wishlist" element={ <WishList  />} />
-        <Route path="/nurseryDetails" element={ <NurseryDetails />} />
+        <Route path="/nurseryDetails/:nurseryId" element={<NurseryDetails />} />
 
       </Routes>
     </BrowserRouter>

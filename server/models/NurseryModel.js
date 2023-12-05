@@ -38,6 +38,22 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  selectedCheckboxes: {
+    type: [String],
+    default: [],
+  },
+  location: {
+    type: String,
+  },
+
+  delivery: {
+    type: String,
+    enum: ["Yes", "No"],
+  },
+
+  priceRange: {
+    type: String,
+  },
 }, {
   timestamps: true
 });

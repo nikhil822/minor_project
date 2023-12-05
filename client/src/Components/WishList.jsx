@@ -1,7 +1,8 @@
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 // import emptyWishlistImage from "./public/Images/heart.png";
 import "../Styles/Wishlist.css";
 import { useLocation } from "react-router-dom";
+import NavbarWithLogin from "./NavbarWithLogin";
 
 const WishList = () => {
   const location = useLocation();
@@ -11,7 +12,7 @@ const WishList = () => {
   if (wishlistItems.length === 0) {
     return (
       <div>
-        <Navbar />
+        <NavbarWithLogin />
         <div className="empty-wishlist">
         <h3>Your wishlist is empty !</h3>
           <img src="../Images/heart.png" alt="Empty Wishlist" />
@@ -23,7 +24,7 @@ const WishList = () => {
 
   return (
     <div>
-      <Navbar />
+      <NavbarWithLogin />
       <div>
         {wishlistItems.map((plant) => (
           <div key={plant.id} className="wishlist-item">

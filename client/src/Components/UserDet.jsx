@@ -1,12 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import "../Styles/UserDet.css";
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import { registerRoute } from "../utils/APIRoutes";
+import NavbarWithoutLogin from "./NavbarWithoutLogin";
 
 export default function UserDet() {
   const navigate = useNavigate();
@@ -72,6 +73,11 @@ export default function UserDet() {
         location,
         pincode,
       } = values;
+
+      const selectedCheckboxes = Array.from(
+        document.querySelectorAll('input[type="checkbox"]:checked')
+      ).map((checkbox) => checkbox.value);
+      
       const { data } = await axios.post(
         registerRoute,
         {
@@ -84,6 +90,7 @@ export default function UserDet() {
           city,
           location,
           pincode,
+          selectedCheckboxes
         },
         {
           withCredentials: true,
@@ -101,7 +108,7 @@ export default function UserDet() {
 
   return (
     <>
-      <Navbar />
+      <NavbarWithoutLogin />
       <div className="main">
         <div className="image">
           <img src="../Images/userimg.png" alt="Form image" />
