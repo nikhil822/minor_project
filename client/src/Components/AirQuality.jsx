@@ -87,7 +87,34 @@ const AirQuality = () => {
       setAqi(aqiData);
     }
   };
+  const handlePollutionHistory = () => {
+    const currentDate = new Date();
+    const currentDateTime = currentDate.toLocaleString();
+  
+    // Retrieve existing pollution history data from session storage
+    const existingHistory = localStorage.getItem("pollution_history");
+    let pollutionHistory = [];
+  
+    if (existingHistory) {
+      // Parse existing history data if it exists
+      pollutionHistory = JSON.parse(existingHistory);
+    }
+  
+    // Add new pollution data to the array
+    const newPollutionData = {
+      aqi: aqi,
+      dateTime: currentDateTime
+    };
+    pollutionHistory.push(newPollutionData);
+  
+    // Save updated pollution history back to session storage
+    localStorage.setItem("pollution_history", JSON.stringify(pollutionHistory));
+  };
+  
+  const handleshowpolutionhistort=()=>{
+       navigate("/pollution-history");
 
+  }
   return (
     <>
       <NavbarWithLogin />
@@ -134,6 +161,12 @@ const AirQuality = () => {
           onClick={() => navigate("/plantrecom", { state: { name } })}
         >
           Recommendation
+        </button>
+        <button className="btn" onClick={handlePollutionHistory}>
+          Add to Polution histort
+        </button>
+        <button className="btn" onClick={handleshowpolutionhistort}>
+          Show polution history
         </button>
       </div>
     </>

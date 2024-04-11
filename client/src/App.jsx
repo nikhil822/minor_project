@@ -12,6 +12,8 @@ import Nursery from "./Components/Nursery";
 import NurseryProfile from "./Components/NurseryProfile";
 import WishList from "./Components/WishList";
 import NurseryDetails from "./Components/NurseryDetails";
+import PollutionHistory from "./Components/PollutionHistory"; // Import the PollutionHistory component
+
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route path="/nurseryprofile" element={<NurseryProfile />} />
         <Route path="/wishlist" element={ <WishList  />} />
         <Route path="/nurseryDetails/:nurseryId" element={<NurseryDetails />} />
+        <Route path="/pollution-history" element={<PollutionHistory />} />
+
 
       </Routes>
     </BrowserRouter>

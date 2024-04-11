@@ -8,7 +8,8 @@ const nurseryRoutes = require("./routes/NurseryRoutes");
 
 app.use(express.json());
 app.use(cors({
-    origin: 'https://minor-project-delta.vercel.app',
+    // origin: 'https://minor-project-delta.vercel.app',
+    origin: 'http://localhost:5173',
     credentials: true,
 }));
 
